@@ -23,10 +23,20 @@ pnpm-debug.log*
 # local env files
 .env*.local
 .env
+.env.production
+.env.development
+.env.test
 
-# vercel
-.vercel
+# security credentials & keys
+*.pem
+*.key
+*.cert
 
-# OS metadata
+# IDE & OS metadata
 .DS_Store
 Thumbs.db
+# vercel & build tools
+.vercel
+.turbo
+
+
