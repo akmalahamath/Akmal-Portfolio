@@ -49,7 +49,6 @@ export const PORTFOLIO_DATA = {
     titles: [
       "AI Engineer",
       "Full-Stack Developer",
-      "Computer Science Undergraduate",
     ],
     heroTagline: "Building intelligent solutions for real-world problems.",
     heroBio:
