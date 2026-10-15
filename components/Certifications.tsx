@@ -77,8 +77,7 @@ export const Certifications: React.FC = () => {
             title="Certifications & Achievements"
             subtitle="Verified technical credentials, workshop completions, and competitive academic recognitions with authentic digital credentials."
             align="left"
-            className="mb-0 max-w-full"
-            titleClassName="whitespace-nowrap text-[16px] min-[360px]:text-[18px] xs:text-[20px] min-[440px]:text-2xl sm:text-3xl md:text-[1.95rem] lg:text-4xl xl:text-5xl"
+            className="mb-0"
           />
 
           {/* Navigation Scroll Buttons (Event Hub Style) */}

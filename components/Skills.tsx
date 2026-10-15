@@ -150,15 +150,13 @@ export const Skills: React.FC = () => {
         {/* Exact 2-Column Visual Card Design with Website Blue Theme*/}
         {/* ======================================================== */}
         <div className="block lg:hidden">
-          {/* Mobile Section Heading with Eyebrow Matching Credentials & Honors Design */}
+          {/* Mobile Section Heading with Badge Matching Certificate Design */}
           <div className="mb-8 text-left">
-            <div className="inline-flex items-center gap-3 mb-4">
-              <span className="w-7 sm:w-9 h-[2px] bg-gradient-to-r from-cyan-400 to-cyan-300 rounded-full shadow-[0_0_8px_#00F0FF] shrink-0" />
-              <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-cyan-400 font-mono">
-                Technical Stack &amp; Expertise
-              </span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#020B14]/85 backdrop-blur-md border border-white/15 text-cyan-300 text-xs font-mono tracking-wider mb-3 shadow-[0_0_12px_rgba(0,240,255,0.25)]">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Technical Stack &amp; Expertise</span>
             </div>
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2 whitespace-nowrap">
+            <h2 className="text-3xl xs:text-4xl font-extrabold text-white tracking-tight mb-2">
               Skills &amp; Technologies
             </h2>
             <p className="text-sm xs:text-base text-slate-300 leading-relaxed max-w-xl">
