@@ -58,8 +58,8 @@ export const Hero: React.FC = () => {
     <div
       className={
         isMobile
-          ? "relative w-[160px] h-[160px] xs:w-[185px] xs:h-[185px] sm:w-[230px] sm:h-[230px] flex items-center justify-center shrink-0"
-          : "relative w-[270px] h-[270px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] flex items-center justify-center"
+          ? "relative w-[160px] h-[160px] xs:w-[185px] xs:h-[185px] sm:w-[230px] sm:h-[230px] flex items-center justify-center shrink-0 rounded-full"
+          : "relative w-[270px] h-[270px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] flex items-center justify-center rounded-full"
       }
       style={
         !isMobile
@@ -70,8 +70,13 @@ export const Hero: React.FC = () => {
           : undefined
       }
     >
-      {/* Ambient Glow Behind Portrait */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/30 via-cyan-400/20 to-cyan-600/10 blur-2xl sm:blur-3xl scale-110 pointer-events-none" />
+      {/* Ambient Circle Glow Behind Portrait (Pure Radial Circle - Eliminates Square Artifacts) */}
+      <div
+        className="absolute -inset-3 sm:-inset-4 rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(0, 240, 255, 0.28) 0%, rgba(0, 240, 255, 0.1) 48%, rgba(0, 240, 255, 0) 70%)",
+        }}
+      />
 
       {/* Orbit 1: Outer Rotating Thin Ring with Dashes */}
       <div className="absolute inset-[-10px] sm:inset-[-15px] rounded-full border border-cyan-400/25 animate-spin-slow pointer-events-none border-dashed" />
@@ -86,7 +91,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* User Portrait Container */}
-      <div className="relative w-full h-full rounded-full p-1.5 sm:p-2.5 bg-gradient-to-b from-cyan-400/50 via-cyan-500/20 to-cyan-500/40 shadow-[0_0_45px_-8px_rgba(0,240,255,0.45)] backdrop-blur-sm">
+      <div className="relative w-full h-full rounded-full p-1.5 sm:p-2.5 bg-gradient-to-b from-cyan-400/50 via-cyan-500/20 to-cyan-500/40 shadow-[0_0_35px_rgba(0,240,255,0.4)]">
         <div className="relative w-full h-full rounded-full overflow-hidden bg-[#04131F] shadow-2xl">
           <Image
             src="/images/akmal-portrait.jpg"
@@ -183,7 +188,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="text-cyan-300 font-semibold text-sm sm:text-base mb-8 sm:mb-10 flex items-start gap-2.5"
+              className="text-cyan-300 font-semibold text-sm sm:text-base mb-11 sm:mb-12 flex items-start gap-2.5"
             >
               <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00F0FF] shrink-0 mt-1.5" />
               <span>{PORTFOLIO_DATA.personal.heroTagline}</span>

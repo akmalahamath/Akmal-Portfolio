@@ -113,7 +113,7 @@ export const Certifications: React.FC = () => {
         {/* Horizontal Event-Hub Style Carousel */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory scroll-smooth no-scrollbar"
+          className="flex gap-4 sm:gap-6 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory scroll-smooth no-scrollbar"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
@@ -127,7 +127,7 @@ export const Certifications: React.FC = () => {
               <div
                 key={cert.id}
                 data-card="true"
-                className="snap-start shrink-0 w-[85vw] max-w-[340px] sm:w-[380px] lg:w-[500px] xl:w-[560px]"
+                className="snap-center shrink-0 w-[calc(100vw-2.2rem)] xs:w-[calc(100vw-2.5rem)] max-w-[440px] sm:w-[380px] lg:w-[500px] xl:w-[560px]"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

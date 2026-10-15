@@ -25,10 +25,10 @@ export const CurrentlyExploring: React.FC = () => {
         {/* Exact 2-Column Visual Card Design Matching Skills View   */}
         {/* ======================================================== */}
         <div className="block lg:hidden">
-          {/* Mobile Section Heading with Small Blue Label */}
+          {/* Mobile Section Heading with Badge Matching Certificate Design */}
           <div className="mb-8 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00F0FF]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#020B14]/85 backdrop-blur-md border border-white/15 text-cyan-300 text-xs font-mono tracking-wider mb-3 shadow-[0_0_12px_rgba(0,240,255,0.25)]">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <span>Continuous Horizon</span>
             </div>
             <h2 className="text-3xl xs:text-4xl font-extrabold text-white tracking-tight mb-2">
@@ -57,10 +57,10 @@ export const CurrentlyExploring: React.FC = () => {
                   }`}
                 >
                   <div>
-                    {/* Top Row: Website Blue Round Shape Glow Icon & Index Tag */}
+                    {/* Top Row: Website Blue Round Glow Icon & Index Tag matching certificate badge style */}
                     <div className="flex items-center justify-between mb-2.5">
-                      <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-full bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 flex items-center justify-center shadow-[0_0_15px_rgba(0,240,255,0.35)]">
-                        <Icon className="w-4 h-4 xs:w-4.5 xs:h-4.5" />
+                      <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-full bg-[#020B14]/85 backdrop-blur-md border border-white/15 text-cyan-300 flex items-center justify-center shadow-[0_0_12px_rgba(0,240,255,0.25)]">
+                        <Icon className="w-4 h-4 xs:w-4.5 xs:h-4.5 text-cyan-400" />
                       </div>
                       <span className="text-[10px] font-mono text-cyan-400/70">
                         FOCUS 0{idx + 1}
