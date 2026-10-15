@@ -147,11 +147,15 @@ export const Skills: React.FC = () => {
         
         {/* ======================================================== */}
         {/* MOBILE RESPONSIVE LAYOUT (< lg screens)                 */}
-        {/* Exact 2-Column Visual Card Design with Violet Badges     */}
+        {/* Exact 2-Column Visual Card Design with Website Blue Theme*/}
         {/* ======================================================== */}
         <div className="block lg:hidden">
-          {/* Mobile Section Heading */}
+          {/* Mobile Section Heading with Small Blue Label */}
           <div className="mb-8 text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00F0FF]" />
+              <span>Technical Stack &amp; Expertise</span>
+            </div>
             <h2 className="text-3xl xs:text-4xl font-extrabold text-white tracking-tight mb-2">
               Skills &amp; Technologies
             </h2>
@@ -171,11 +175,11 @@ export const Skills: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-30px" }}
                   transition={{ duration: 0.4, delay: idx * 0.04 }}
-                  className="rounded-2xl bg-[#031120]/80 border border-white/10 p-3 xs:p-4 flex flex-col justify-between hover:border-purple-400/40 transition-all duration-300 shadow-lg"
+                  className="rounded-2xl bg-[#031120]/80 border border-white/10 p-3 xs:p-4 flex flex-col justify-between hover:border-cyan-400/40 transition-all duration-300 shadow-lg"
                 >
                   <div>
-                    {/* Soft Purple/Violet Glow Icon Container */}
-                    <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-xl bg-gradient-to-br from-purple-500/30 to-indigo-600/20 border border-purple-400/30 text-purple-300 flex items-center justify-center mb-2.5 shadow-[0_0_12px_rgba(168,85,247,0.25)]">
+                    {/* Website Blue Round Shape Glow Icon Container (No Box Shape!) */}
+                    <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-full bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 flex items-center justify-center mb-2.5 shadow-[0_0_15px_rgba(0,240,255,0.35)]">
                       <IconComponent className="w-4 h-4 xs:w-4.5 xs:h-4.5" />
                     </div>
 
@@ -195,7 +199,7 @@ export const Skills: React.FC = () => {
                     {card.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-2 py-0.5 rounded-full text-[9px] xs:text-[10px] sm:text-[11px] font-medium bg-white/[0.04] text-slate-300 border border-white/10"
+                        className="px-2 py-0.5 rounded-full text-[9px] xs:text-[10px] sm:text-[11px] font-medium bg-white/[0.04] text-slate-300 border border-white/10 hover:border-cyan-400/40 hover:text-cyan-200 transition-colors"
                       >
                         {skill}
                       </span>
@@ -282,28 +286,6 @@ export const Skills: React.FC = () => {
                   </div>
                 </GlassCard>
               </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* INFINITE HORIZONTAL MARQUEE */}
-        <div className="relative mt-16 overflow-hidden py-4 -mx-4 sm:-mx-6 lg:-mx-8">
-          {/* Edge blur fade masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-36 bg-gradient-to-r from-[#020B14] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-36 bg-gradient-to-l from-[#020B14] to-transparent z-10 pointer-events-none" />
-
-          <div className="flex w-max animate-marquee gap-4">
-            {[
-              ...PORTFOLIO_DATA.skills.marqueeTechnologies,
-              ...PORTFOLIO_DATA.skills.marqueeTechnologies,
-            ].map((tech, idx) => (
-              <div
-                key={`${tech}-${idx}`}
-                className="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-cyan-400/50 hover:bg-white/[0.08] hover:shadow-[0_0_20px_-3px_rgba(0,240,255,0.3)] transition-all duration-200 cursor-default select-none"
-              >
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-                <span className="text-xs sm:text-sm font-medium text-slate-200">{tech}</span>
-              </div>
             ))}
           </div>
         </div>

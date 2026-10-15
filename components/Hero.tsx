@@ -173,7 +173,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-slate-200 text-lg sm:text-xl leading-[1.85] mt-3 mb-5 font-normal"
+              className="text-slate-300 text-[15px] sm:text-base leading-[1.75] mt-3 mb-5 font-normal"
             >
               {PORTFOLIO_DATA.personal.heroBio}
             </motion.p>
@@ -183,9 +183,9 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="text-cyan-300 font-semibold text-base sm:text-lg mb-8 sm:mb-10 flex items-start gap-2.5"
+              className="text-cyan-300 font-semibold text-sm sm:text-base mb-8 sm:mb-10 flex items-start gap-2.5"
             >
-              <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00F0FF] shrink-0 mt-1.5" />
+              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00F0FF] shrink-0 mt-1.5" />
               <span>{PORTFOLIO_DATA.personal.heroTagline}</span>
             </motion.p>
 
