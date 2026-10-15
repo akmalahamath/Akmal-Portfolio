@@ -137,7 +137,7 @@ export const Hero: React.FC = () => {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="whitespace-nowrap text-3xl xs:text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-2 leading-none"
+                className="text-[1.7rem] xs:text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-2 leading-[1.1]"
               >
                 {PORTFOLIO_DATA.personal.name}
               </motion.h1>

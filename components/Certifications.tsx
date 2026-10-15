@@ -78,6 +78,7 @@ export const Certifications: React.FC = () => {
             subtitle="Verified technical credentials, workshop completions, and competitive academic recognitions with authentic digital credentials."
             align="left"
             className="mb-0"
+            titleClassName="text-[1.7rem] xs:text-3xl sm:text-4xl md:text-5xl"
           />
 
           {/* Navigation Scroll Buttons (Event Hub Style) */}

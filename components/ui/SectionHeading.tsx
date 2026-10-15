@@ -10,6 +10,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   align?: "left" | "center";
   className?: string;
+  titleClassName?: string;
 }
 
 export const SectionHeading: React.FC<SectionHeadingProps> = ({
@@ -18,6 +19,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   subtitle,
   align = "center",
   className,
+  titleClassName,
 }) => {
   return (
     <motion.div
@@ -44,14 +46,25 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           </span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+      <h2
+        className={cn(
+          "text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4",
+          titleClassName
+        )}
+      >
         {title}
       </h2>
       {subtitle && (
-        <p className="text-base sm:text-lg text-slate-400 leading-relaxed font-normal">
+        <p
+          className={cn(
+            "text-base sm:text-lg text-slate-400 leading-relaxed font-normal",
+            align === "center" && "mx-auto"
+          )}
+        >
           {subtitle}
         </p>
       )}
     </motion.div>
   );
 };
+
